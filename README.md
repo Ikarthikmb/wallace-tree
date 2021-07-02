@@ -1,5 +1,7 @@
 # IMPLEMENTATION OF A CMOS 3-BIT WALLACE TREE MULTIPLIER WITH SKY130 PDK USING eSim
 
+![](fig/wallace3tree/wallace3tree_schematic.png)
+
 A Wallace multiplier is a digital circuit which multiplies two
 integers in binary format. It uses half and full adders to sum 
 partial products in stages until two numbers are left. In this
@@ -42,3 +44,10 @@ and creats a project for "wallace3tree". Then select
 "wallace3tree.sch" to launch the schematic of the project. Feel 
 free to contact for issues or updates regarding the project.
 
+## Figures
+
+![AND gate schematic](fig/wallace3tree/and_gate_sch.png)
+
+![XOR gate schematic](fig/wallace3tree/xor_gate_sch.png)
+
+![Output waveforms](fig/zout/zout.png)
