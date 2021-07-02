@@ -33,7 +33,7 @@ Total Full Adders: 3 nos
 ## RUN:
 
 Run the simulation in terminal by
-"ngspice wallace3tree_test.cir"
+`ngspice wallace3tree_test.cir`
 
 ## SCHEMATIC:
 
