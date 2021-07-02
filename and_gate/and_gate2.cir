@@ -1,0 +1,27 @@
+And gate circuit
+
+* /home/drako/esim-workspace/and_gate/and_gate.cir
+
+.lib "~/eSim-Workspace/prelayout/sky130_fd_pr/models/sky130.lib.spice" tt
+
+xm2  net-_m1-pad3_ a_in net-_m2-pad3_ net-_m2-pad3_ sky130_fd_pr__nfet_01v8 w=1 l=0.5
+xm3  net-_m2-pad3_ b_in gnd gnd sky130_fd_pr__nfet_01v8 w=1 l=0.5
+xm1  vcc a_in net-_m1-pad3_ vcc sky130_fd_pr__pfet_01v8 w=1 l=0.5
+xm4  vcc b_in net-_m1-pad3_ vcc sky130_fd_pr__pfet_01v8 w=1 l=0.5
+xm5  and_out net-_m1-pad3_ gnd gnd sky130_fd_pr__nfet_01v8 w=1 l=0.5
+xm6  vcc net-_m1-pad3_ and_out vcc sky130_fd_pr__pfet_01v8 w=1 l=0.5
+
+v1 vcc gnd dc 3.3
+v2 a_in gnd pulse 0 1.8 0 0 0 5n 10n
+v3 b_in gnd pulse 0 1.8 0 0 0 10n 20n
+
+.tran 0.1n 40n
+
+* Control Statements 
+.control
+run
+plot a_in b_in and_out
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
