@@ -1,0 +1,29 @@
+* /home/drako/esim-workspace/wallace2tree/wallace2tree.cir
+
+.lib "~/eSim-Workspace/prelayout/sky130_fd_pr/models/sky130.lib.spice" tt
+
+.include halfadder.sub
+.include and_gate.sub
+x2 b0 a0 z0 and_gate
+x1 b0 a1 net-_x1-pad3_ and_gate
+x3 b1 a0 net-_x3-pad3_ and_gate
+x4 b1 a1 net-_x4-pad3_ and_gate
+x5 net-_x3-pad3_ net-_x1-pad3_ z1 net-_x5-pad4_ halfadder
+x6 net-_x5-pad4_ net-_x4-pad3_ z2 z3 halfadder
+* u1  a1 a0 b0 b1 z0 z1 z2 z3 port
+
+v1 b0 gnd pulse 0 1.8 0 0.1n 0.1n 5n 10n 
+v2 b1 gnd pulse 0 1.8 0 0.1n 0.1n 10n 20n 
+v3 a0 gnd pulse 0 1.8 0 0.1n 0.1n 20n 40n 
+v4 a1 gnd pulse 0 1.8 0 0.1n 0.1n 40n 80n
+
+.tran 0.1n 160n
+
+* Control Statements 
+.control
+run
+plot z0 z1 z2 z3
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end

@@ -1,0 +1,26 @@
+* /home/drako/eSim-Workspace/wallace3tree/wallace3tree.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Wed Jun 30 02:29:32 2021
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+x2  /b0 /a0 /z0 and_gate		
+x1  /b0 /a1 Net-_x1-Pad3_ and_gate		
+x5  /b1 /a0 Net-_x5-Pad3_ and_gate		
+x6  /b1 /a1 Net-_x6-Pad3_ and_gate		
+x7  Net-_x5-Pad3_ Net-_x1-Pad3_ /z1 Net-_x7-Pad4_ halfadder		
+U1  /a1 /a0 /a2 /b0 /b1 /b2 /z0 /z1 /z2 /z3 /z4 /z5 PORT		
+x3  /b0 /a2 Net-_x3-Pad3_ and_gate		
+x4  /b1 /a2 Net-_x4-Pad3_ and_gate		
+x8  Net-_x6-Pad3_ Net-_x3-Pad3_ Net-_x7-Pad4_ Net-_x13-Pad2_ Net-_x8-Pad5_ fulladder		
+x10  /b2 /a0 Net-_x10-Pad3_ and_gate		
+x11  /b2 /a1 Net-_x11-Pad3_ and_gate		
+x12  /b2 /a2 Net-_x12-Pad3_ and_gate		
+x13  Net-_x10-Pad3_ Net-_x13-Pad2_ /z2 Net-_x13-Pad4_ halfadder		
+x14  Net-_x11-Pad3_ Net-_x14-Pad2_ Net-_x13-Pad4_ /z3 Net-_x14-Pad5_ fulladder		
+x9  Net-_x8-Pad5_ Net-_x4-Pad3_ Net-_x14-Pad2_ Net-_x15-Pad2_ halfadder		
+x15  Net-_x12-Pad3_ Net-_x15-Pad2_ Net-_x14-Pad5_ /z4 /z5 fulladder		
+
+.end

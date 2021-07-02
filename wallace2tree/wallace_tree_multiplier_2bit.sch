@@ -1,0 +1,281 @@
+EESchema Schematic File Version 2
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:power
+LIBS:eSim_Plot
+LIBS:transistors
+LIBS:conn
+LIBS:eSim_User
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:eSim_Analog
+LIBS:eSim_Devices
+LIBS:eSim_Digital
+LIBS:eSim_Hybrid
+LIBS:eSim_Miscellaneous
+LIBS:eSim_Power
+LIBS:eSim_Sources
+LIBS:eSim_Subckt
+LIBS:eSim_Nghdl
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L and_gate x2
+U 1 1 60DB3CA6
+P 3275 1900
+F 0 "x2" H 3225 2100 60  0000 C CNN
+F 1 "and_gate" H 3250 1700 60  0000 C CNN
+F 2 "" H 3275 1900 60  0001 C CNN
+F 3 "" H 3275 1900 60  0001 C CNN
+	1    3275 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L and_gate x1
+U 1 1 60DB3D16
+P 3250 3250
+F 0 "x1" H 3200 3450 60  0000 C CNN
+F 1 "and_gate" H 3225 3050 60  0000 C CNN
+F 2 "" H 3250 3250 60  0001 C CNN
+F 3 "" H 3250 3250 60  0001 C CNN
+	1    3250 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L and_gate x3
+U 1 1 60DB3D68
+P 4925 2375
+F 0 "x3" H 4875 2575 60  0000 C CNN
+F 1 "and_gate" H 4900 2175 60  0000 C CNN
+F 2 "" H 4925 2375 60  0001 C CNN
+F 3 "" H 4925 2375 60  0001 C CNN
+	1    4925 2375
+	1    0    0    -1  
+$EndComp
+$Comp
+L and_gate x4
+U 1 1 60DB3DC9
+P 4925 3925
+F 0 "x4" H 4875 4125 60  0000 C CNN
+F 1 "and_gate" H 4900 3725 60  0000 C CNN
+F 2 "" H 4925 3925 60  0001 C CNN
+F 3 "" H 4925 3925 60  0001 C CNN
+	1    4925 3925
+	1    0    0    -1  
+$EndComp
+$Comp
+L halfadder x5
+U 1 1 60DB3E19
+P 6225 2325
+F 0 "x5" H 5900 1725 60  0000 C CNN
+F 1 "halfadder" H 6050 2075 60  0000 C CNN
+F 2 "" V 6050 2075 60  0001 C CNN
+F 3 "" V 6050 2075 60  0001 C CNN
+	1    6225 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L halfadder x6
+U 1 1 60DB4011
+P 7175 3625
+F 0 "x6" H 6850 3025 60  0000 C CNN
+F 1 "halfadder" H 7000 3375 60  0000 C CNN
+F 2 "" V 7000 3375 60  0001 C CNN
+F 3 "" V 7000 3375 60  0001 C CNN
+	1    7175 3625
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6925 3925 5275 3925
+Wire Wire Line
+	5975 2375 5275 2375
+Wire Wire Line
+	4200 3850 4500 3850
+Wire Wire Line
+	4200 1350 4200 3850
+Wire Wire Line
+	4200 2300 4500 2300
+Connection ~ 4200 2300
+Wire Wire Line
+	2575 4000 4500 4000
+Wire Wire Line
+	2850 1825 2575 1825
+Wire Wire Line
+	2575 1375 2575 3175
+Wire Wire Line
+	2575 3175 2825 3175
+Connection ~ 2575 1825
+Wire Wire Line
+	1900 1975 2850 1975
+Wire Wire Line
+	1875 3325 2825 3325
+Wire Wire Line
+	2725 1975 2725 2450
+Wire Wire Line
+	2725 2450 4500 2450
+Connection ~ 2725 1975
+Wire Wire Line
+	2575 3325 2575 4000
+Connection ~ 2575 3325
+Wire Wire Line
+	6350 2975 6350 3675
+Wire Wire Line
+	6350 3675 6925 3675
+Wire Wire Line
+	6950 2375 8450 2375
+Wire Wire Line
+	7900 3675 8525 3675
+Wire Wire Line
+	3625 1900 8450 1900
+Wire Wire Line
+	7300 4275 7300 4450
+Wire Wire Line
+	7300 4450 8550 4450
+Wire Wire Line
+	3600 3250 5975 3250
+Wire Wire Line
+	5975 3250 5975 2625
+$Comp
+L PORT U1
+U 2 1 60DB44D6
+P 1650 1975
+F 0 "U1" H 1700 2075 30  0000 C CNN
+F 1 "PORT" H 1650 1975 30  0000 C CNN
+F 2 "" H 1650 1975 60  0000 C CNN
+F 3 "" H 1650 1975 60  0000 C CNN
+	2    1650 1975
+	1    0    0    -1  
+$EndComp
+$Comp
+L PORT U1
+U 1 1 60DB452E
+P 1625 3325
+F 0 "U1" H 1675 3425 30  0000 C CNN
+F 1 "PORT" H 1625 3325 30  0000 C CNN
+F 2 "" H 1625 3325 60  0000 C CNN
+F 3 "" H 1625 3325 60  0000 C CNN
+	1    1625 3325
+	1    0    0    -1  
+$EndComp
+$Comp
+L PORT U1
+U 3 1 60DB4592
+P 2575 1125
+F 0 "U1" H 2625 1225 30  0000 C CNN
+F 1 "PORT" H 2575 1125 30  0000 C CNN
+F 2 "" H 2575 1125 60  0000 C CNN
+F 3 "" H 2575 1125 60  0000 C CNN
+	3    2575 1125
+	0    1    1    0   
+$EndComp
+$Comp
+L PORT U1
+U 4 1 60DB4633
+P 4200 1100
+F 0 "U1" H 4250 1200 30  0000 C CNN
+F 1 "PORT" H 4200 1100 30  0000 C CNN
+F 2 "" H 4200 1100 60  0000 C CNN
+F 3 "" H 4200 1100 60  0000 C CNN
+	4    4200 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L PORT U1
+U 5 1 60DB4693
+P 8700 1900
+F 0 "U1" H 8750 2000 30  0000 C CNN
+F 1 "PORT" H 8700 1900 30  0000 C CNN
+F 2 "" H 8700 1900 60  0000 C CNN
+F 3 "" H 8700 1900 60  0000 C CNN
+	5    8700 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L PORT U1
+U 6 1 60DB475E
+P 8700 2375
+F 0 "U1" H 8750 2475 30  0000 C CNN
+F 1 "PORT" H 8700 2375 30  0000 C CNN
+F 2 "" H 8700 2375 60  0000 C CNN
+F 3 "" H 8700 2375 60  0000 C CNN
+	6    8700 2375
+	-1   0    0    1   
+$EndComp
+$Comp
+L PORT U1
+U 7 1 60DB47A4
+P 8775 3675
+F 0 "U1" H 8825 3775 30  0000 C CNN
+F 1 "PORT" H 8775 3675 30  0000 C CNN
+F 2 "" H 8775 3675 60  0000 C CNN
+F 3 "" H 8775 3675 60  0000 C CNN
+	7    8775 3675
+	-1   0    0    1   
+$EndComp
+$Comp
+L PORT U1
+U 8 1 60DB4825
+P 8800 4450
+F 0 "U1" H 8850 4550 30  0000 C CNN
+F 1 "PORT" H 8800 4450 30  0000 C CNN
+F 2 "" H 8800 4450 60  0000 C CNN
+F 3 "" H 8800 4450 60  0000 C CNN
+	8    8800 4450
+	-1   0    0    1   
+$EndComp
+Wire Notes Line
+	2300 1575 8025 1575
+Wire Notes Line
+	8025 1575 8025 4600
+Wire Notes Line
+	8025 4600 2300 4600
+Wire Notes Line
+	2300 4600 2300 1575
+Text Label 2000 1975 0    60   ~ 0
+a0
+Text Label 2575 1500 1    60   ~ 0
+b0
+Text Label 2050 3325 0    60   ~ 0
+a1
+Text Label 4200 1525 1    60   ~ 0
+b1
+Text Label 8175 1900 0    60   ~ 0
+z0
+Text Label 8225 2375 0    60   ~ 0
+z1
+Text Label 8300 3675 0    60   ~ 0
+z2
+Text Label 8375 4450 0    60   ~ 0
+z3
+$EndSCHEMATC

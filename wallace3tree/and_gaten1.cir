@@ -1,0 +1,26 @@
+* /home/drako/applications/esim-2.1/library/subcircuitlibrary/and_gate/and_gate.cir
+
+.lib "~/eSim-Workspace/prelayout/sky130_fd_pr/models/sky130.lib.spice" tt
+
+xm2  net-_m1-pad3_ net-_m1-pad2_ net-_m2-pad3_ net-_m2-pad3_ sky130_fd_pr__nfet_01v8 w=1 l=0.5 m=1
+xm3  net-_m2-pad3_ net-_m3-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 w=1 l=0.5 m=1
+xm1  net-_m1-pad1_ net-_m1-pad2_ net-_m1-pad3_ net-_m1-pad1_ sky130_fd_pr__pfet_01v8 w=2.5u l=0.5u m=1u
+xm4  net-_m1-pad1_ net-_m3-pad2_ net-_m1-pad3_ net-_m1-pad1_ sky130_fd_pr__pfet_01v8 w=2.5u l=0.5u m=1u
+xm5  net-_m5-pad1_ net-_m1-pad3_ gnd gnd sky130_fd_pr__nfet_01v8 w=1 l=0.5 m=1
+xm6  net-_m1-pad1_ net-_m1-pad3_ net-_m5-pad1_ net-_m1-pad1_ sky130_fd_pr__pfet_01v8 w=2.5u l=0.5u m=1u
+* u1  net-_m1-pad2_ net-_m3-pad2_ net-_m5-pad1_ port
+v1  net-_m1-pad1_ gnd 3.3v
+
+v2 net-_m1-pad2_ gnd pulse 0 1.8 0 0 0 5n 10n
+v3 net-_m3-pad2_ gnd pulse 0 1.8 0 0 0 10n 20n
+
+.tran 0.1n 40n
+
+* Control Statements 
+.control
+run
+plot net-_m5-pad1_ port
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
