@@ -15,11 +15,11 @@ sky130pdk in this folder and change the current path in
 
 ## Ports of CMOS 3-bit Wallace Multiplier:
 
-Port | Type | Description
---- | --- | ---
-a | Input | 3-bit input 
-b | Input | 3-bit input 
-z | Output | 6-bit output
+Port  | Description
+---  | ---
+a  | 3-bit input 
+b  | 3-bit input 
+z  | 6-bit output
 
 Here "a" and "b" are 3-bit input digits, and the output "z"
 contains 6-bits.
