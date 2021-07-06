@@ -11,15 +11,20 @@ sky130pdk in this folder and change the current path in
 "wallace3tree_test.cir" directing to the sky130 pdk.
 
 ## Requirements: 
+
 * NGSpice Software
 * eSim 
 
-* Download this repository and follow the below steps
+## Recreate This Project:
+
+You can download this repository by
 
 ```sh
 git clone https://github.com/Ikarthikmb/wallace-tree.git
 cd wallace-tree
 ```
+Open eSim application and select **open project** then navigate to this folder(wallace-tree) .
+The **wallace-tree** project file is now added.
 
 ## Ports of CMOS 3-bit Wallace Multiplier:
 
@@ -28,7 +33,6 @@ Port | Type | Description
 a | Input | 3-bit input 
 b | Input | 3-bit input 
 z | Output | 6-bit output
-
 
 Here "a" and "b" are 3-bit input digits, and the output "z"
 contains 6-bits.
