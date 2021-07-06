@@ -94,11 +94,13 @@ $ cp wallace3tree.cir.out wallace3tree.cir
 
 **Step-9:** Adding SKY130 Tech
 
-Add the path for the sky130pdk in the `wallace3tree.cir.out` file. Replace the model mosfet_n with `sky130_fd_pr__nfet_01v8` 
-and mosfet_p with `sky130_fd_pr__pfet_01v8`. Now lets simulate the circuit with ngspice.
+Add the path for the sky130pdk in the `wallace3tree.cir.out` file. In the subcircuit `.sub` file replace the 
+model mosfet_n with `sky130_fd_pr__nfet_01v8` and mosfet_p with `sky130_fd_pr__pfet_01v8`. 
+Now, lets simulate the circuit with ngspice.
 
 
 **Step-10:** NGSpice Simulation
+Lets assign the inputs `a` and `b` with the pulse signals and try to observe the output.
 
 ```sh
 $ ngspice wallace3tree_test.cir
