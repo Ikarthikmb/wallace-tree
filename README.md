@@ -24,7 +24,7 @@ git clone https://github.com/Ikarthikmb/wallace-tree.git
 cd wallace-tree
 ```
 Open eSim application and select **open project** then navigate to this folder(wallace-tree)
- and select **wallace3tree**. The **wallace-tree** project file is now added.
+ and select **wallace3tree**. The **wallace-tree** project file is now added in the eSim.
 
 ## Ports of CMOS 3-bit Wallace Multiplier:
 
@@ -56,7 +56,9 @@ Full Adders | 3 nos
 
 Run the simulation in terminal by
 
-```ngspice wallace3tree_test.cir```
+```
+ngspice wallace3tree_test.cir
+```
 
 ## Schematics:
 
