@@ -23,8 +23,8 @@ You can download this repository by
 git clone https://github.com/Ikarthikmb/wallace-tree.git
 cd wallace-tree
 ```
-Open eSim application and select **open project** then navigate to this folder(wallace-tree) .
-The **wallace-tree** project file is now added.
+Open eSim application and select **open project** then navigate to this folder(wallace-tree)
+ and select **wallace3tree**. The **wallace-tree** project file is now added.
 
 ## Ports of CMOS 3-bit Wallace Multiplier:
 
