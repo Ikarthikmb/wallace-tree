@@ -1,0 +1,27 @@
+* /home/drako/applications/esim-2.1/library/subcircuitlibrary/xor_gate/xor_gate.cir
+
+m5  net-_m10-pad3_ net-_m3-pad2_ net-_m5-pad3_ net-_m5-pad3_ mosfet_n
+m8  net-_m10-pad1_ net-_m11-pad2_ net-_m10-pad3_ net-_m10-pad1_ mosfet_p
+m7  net-_m14-pad1_ net-_m3-pad2_ net-_m10-pad1_ net-_m14-pad1_ mosfet_p
+m10  net-_m10-pad1_ net-_m1-pad2_ net-_m10-pad3_ net-_m10-pad1_ mosfet_p
+m6  net-_m5-pad3_ net-_m1-pad1_ gnd gnd mosfet_n
+m11  net-_m10-pad3_ net-_m11-pad2_ net-_m11-pad3_ net-_m11-pad3_ mosfet_n
+m12  net-_m11-pad3_ net-_m1-pad2_ gnd gnd mosfet_n
+m3  net-_m11-pad2_ net-_m3-pad2_ gnd gnd mosfet_n
+m4  net-_m14-pad1_ net-_m3-pad2_ net-_m11-pad2_ net-_m14-pad1_ mosfet_p
+m1  net-_m1-pad1_ net-_m1-pad2_ gnd gnd mosfet_n
+m2  net-_m14-pad1_ net-_m1-pad2_ net-_m1-pad1_ net-_m14-pad1_ mosfet_p
+* u1  net-_m1-pad2_ net-_m3-pad2_ net-_m13-pad1_ port
+m13  net-_m13-pad1_ net-_m10-pad3_ gnd gnd mosfet_n
+m14  net-_m14-pad1_ net-_m10-pad3_ net-_m13-pad1_ net-_m14-pad1_ mosfet_p
+m9  net-_m14-pad1_ net-_m1-pad1_ net-_m10-pad1_ net-_m14-pad1_ mosfet_p
+v1  net-_m14-pad1_ gnd 3.3v
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end

@@ -1,0 +1,37 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# and_gate-RESCUE-halfadder
+#
+DEF and_gate-RESCUE-halfadder X 0 40 Y Y 1 F N
+F0 "X" -50 200 60 H V C CNN
+F1 "and_gate-RESCUE-halfadder" -25 -200 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+A 21 0 128 769 -769 0 1 0 f 50 125 50 -125
+P 4 0 1 0 50 125 -225 125 -225 -125 50 -125 f
+X a 1 -425 75 200 R 50 50 1 1 I
+X b 2 -425 -75 200 R 50 50 1 1 I
+X y 3 350 0 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# xor_gate-RESCUE-halfadder
+#
+DEF xor_gate-RESCUE-halfadder x 0 40 Y Y 1 F N
+F0 "x" 75 125 60 H V C CNN
+F1 "xor_gate-RESCUE-halfadder" 50 -150 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+A -225 -12 133 410 -413 0 1 0 N -125 75 -125 -100
+A 187 -12 88 815 -816 0 1 0 N 200 75 200 -100
+P 20 0 1 0 -125 75 200 75 224 72 250 56 265 37 275 0 276 -28 269 -50 250 -75 228 -92 200 -100 -125 -100 -100 -50 -95 -30 -93 -11 -95 12 -105 42 -121 71 -126 76 -125 75 f
+X a 1 -300 25 200 R 50 50 1 1 I
+X b 2 -300 -50 200 R 50 50 1 1 I
+X yout 3 475 0 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

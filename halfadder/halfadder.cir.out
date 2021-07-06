@@ -1,0 +1,17 @@
+* /home/drako/esim-workspace/halfadder/halfadder.cir
+
+.include xor_gate.sub
+.include and_gate.sub
+* u1  /carry /sum port
+* u2  /a0 /b0 port
+x2 /a0 /b0 /carry and_gate
+x1 /a0 /b0 /sum xor_gate
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end

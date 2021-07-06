@@ -1,0 +1,24 @@
+* /home/drako/esim-workspace/halfadder/halfadder.cir
+
+.lib "~/eSim-Workspace/prelayout/sky130_fd_pr/models/sky130.lib.spice" tt
+
+.include xor_gate.sub
+.include and_gate.sub
+* u1  carry sum port
+* u2  a0 b0 port
+x2 a0 b0 carry and_gate
+x1 a0 b0 sum xor_gate
+
+v2 a0 0 pulse 0 1.8 0 0.1n 0.1n 5n 10n 
+v3 b0 0 pulse 0 1.8 0 0.1n 0.1n 10n 20n 
+
+.tran 0.1n 40n
+
+* Control Statements 
+.control
+run
+plot sum carry
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
