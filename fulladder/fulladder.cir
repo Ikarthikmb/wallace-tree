@@ -1,0 +1,14 @@
+* /home/drako/eSim-Workspace/fulladder/fulladder.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Tue Jun 29 20:44:07 2021
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+x1  Net-_x1-Pad1_ Net-_x1-Pad2_ /carry xor_gate		
+U1  /cin /ain /bin /sum /carry PORT		
+x2  /ain /bin Net-_x2-Pad3_ Net-_x1-Pad2_ halfadder		
+x3  /cin Net-_x2-Pad3_ /sum Net-_x1-Pad1_ halfadder		
+
+.end

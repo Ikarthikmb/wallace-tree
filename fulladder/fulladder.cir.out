@@ -1,0 +1,17 @@
+* /home/drako/esim-workspace/fulladder/fulladder.cir
+
+.include xor_gate.sub
+.include halfadder.sub
+x1 net-_x1-pad1_ net-_x1-pad2_ /carry xor_gate
+* u1  /cin /ain /bin /sum /carry port
+x2 /ain /bin net-_x2-pad3_ net-_x1-pad2_ halfadder
+x3 /cin net-_x2-pad3_ /sum net-_x1-pad1_ halfadder
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
