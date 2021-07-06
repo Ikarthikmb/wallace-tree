@@ -14,6 +14,13 @@ sky130pdk in this folder and change the current path in
 * NGSpice Software
 * eSim 
 
+* Download this repository and follow the below steps
+
+```sh
+git clone https://github.com/Ikarthikmb/wallace-tree.git
+cd wallace-tree
+```
+
 ## Ports of CMOS 3-bit Wallace Multiplier:
 
 Port | Type | Description
