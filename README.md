@@ -15,7 +15,6 @@ sky130pdk in this folder and change the current path in
 
 ## Ports of CMOS 3-bit Wallace Multiplier:
 
-<<<<<<< HEAD
 ![](fig/wallace_multiplier_draw.jpeg)
 
 Port | Type | Description
@@ -23,16 +22,8 @@ Port | Type | Description
 a | Input | 3-bit input 
 b | Input | 3-bit input 
 z | Output | 6-bit output
-=======
-Port  | Description
----  | ---
-a  | 3-bit input 
-b  | 3-bit input 
-z  | 6-bit output
->>>>>>> 22a6a2754b128722f7451292b9f76703429d4d92
 
-Here "a" and "b" are 3-bit input digits, and the output "z"
-contains 6-bits.
+| Here "a" and "b" are 3-bit input digits, and the output "z" contains 6-bits.
 
 ## Components of 3-bit Wallace Tree Multiplier:
 
@@ -49,7 +40,6 @@ Full Adders | 3 nos
 3. and_gate
 4. xor_gate
 
-<<<<<<< HEAD
 ## Wallace Tree Algorithm: 
 
 ![](fig/stages.jpeg)
@@ -72,143 +62,95 @@ open this folder, the esim automatically detects the `.proj` file
 and creats a project for "**wallace3tree**". Then select respective 
 "**.sch**" file to launch the schematic of the project.
 
-## AND GATE
-
-![AND gate Truth table](fig/and_tt.jpeg)
-
-### AND gate schematic:
-
-![AND gate schematic](fig/and_sch_gif.gif)
-
-## XOR GATE
-
-![XOR gate Truth table](fig/xor_tt.jpeg)
-
-### XOR gate schematic:
-
-![XOR gate schematic](fig/xor_sch_gif.gif)
-
-## HALF ADDER
-
-![Half Adder Truth table](fig/ha_tt.jpeg)
-
-### Half Adder schematic:
-
-![Half Adder schematic](fig/ha_sch_gif.gif)
-=======
 ## Steps To Run Project:
 
-**Step-1:** Download this repository
+### Step-1: Downloading the repository
 
 ```sh
 $ git clone https://github.com/Ikarthikmb/wallace-tree.git
 ```
 
-**Step-2:** Creating eSim Project
+### Step-2: Creating eSim Project
 
 Open eSim application and select **open project** then navigate to folder `wallace-tree`
  to select **wallace3tree**. The **wallace3tree** project file is now added in the eSim.
 
-**Step-3:** Schematic for AND gate
->>>>>>> 22a6a2754b128722f7451292b9f76703429d4d92
+### Step-3: AND gate
 
-## FULL ADDER
+![AND gate Truth table](fig/and_tt.jpeg)
 
-<<<<<<< HEAD
-![Full Adder Truth table](fig/fa_tt.jpeg)
-=======
+**AND gate schematic:**
+
+![AND gate schematic](fig/and_sch_gif.gif)
+
 Draw a schematic with eSim Schematic editor for an **AND gate** logic circuit with cmos logic, 
 perform CRC error check and export the **ngspice netlist**.
 
-**Step-4:** Schematic for XOR gate
->>>>>>> 22a6a2754b128722f7451292b9f76703429d4d92
+### Step-4: XOR gate
 
-### Full Adder schematic:
+![XOR gate Truth table](fig/xor_tt.jpeg)
 
-<<<<<<< HEAD
-![Full Adder schematic](fig/fa_sch_gif.gif)
+![XOR gate schematic](fig/xor_sch_gif.gif)
 
-
-##  3-bit Wallace Tree Multiplier schematic:
-
-![ 3-bit Wallace Tree Multiplier schematic](fig/wallace_sch_gif.gif)
-
-
-## Simulation:
-
-Open terminal, change the directory to wallace3tree.Run the simulation by
-
-```
-ngspice wallace3tree_test.cir
-```
-=======
 Draw a schematic with eSim Schematic editor for an **XOR gate** logic circuit with cmos logic, 
 perform CRC error check and export the **ngspice netlist**.
 
-**Step-5:** Schematic for Half Adder
+### Step-5: Half Adder
+
+![Half Adder Truth table](fig/ha_tt.jpeg)
+
+![Half Adder schematic](fig/ha_sch_gif.gif)
 
 Draw a schematic with eSim Schematic editor for an **Half Adder** circuit with AND and XOR gates, 
 then perform CRC error check and export the **ngspice netlist**.
 
-**Step-6:** Schematic for Full Adder
+### Step-6: Full Adder
+
+![Full Adder Truth table](fig/fa_tt.jpeg)
+
+![Full Adder schematic](fig/fa_sch_gif.gif)
 
 Draw a schematic with eSim Schematic editor for a **Full Adder** circuit with AND and XOR gates, 
 then perform CRC error check and export the **ngspice netlist**.
 
-**Step-7:** Schematic for 3-bit Wallace tree Multiplier
+### Step-7: 3-bit Wallace tree Multiplier
 
-![3-bit Wallace tree Multiplier Schematic](fig/wallace3tree/wallace3tree_schematic.png)
->>>>>>> 22a6a2754b128722f7451292b9f76703429d4d92
+![ 3-bit Wallace Tree Multiplier schematic](fig/wallace_sch_gif.gif)
 
 Draw a schematic with eSim Schematic editor for a **3-bit Wallace Multiplier** logic circuit 
 with AND gates, half adders and full adders. Then perform CRC error check and export the **ngspice netlist**.
 
-**Step-8:** Convert KiCAD to NGSpice
+### Step-8: Convert KiCAD to NGSpice
 
 After the netlist is generated, select **kicad to spice** from the eSim window to convert the 
 kicad schematic to ngspice model. Rename the netlist file `wallace3tree.cir.out` to `wallace3tree_test.cir`
 
 ```sh
-$ cp wallace3tree.cir.out wallace3tree.cir
+$ cp wallace3tree.cir.out wallace3tree_test.cir
 ```
 
-**Step-9:** Adding SKY130 Tech
+### Step-9: SKY130 Tech
 
 Add the path for the sky130pdk in the `wallace3tree.cir.out` file. In the subcircuit `.sub` file replace the 
 model mosfet_n with `sky130_fd_pr__nfet_01v8` and mosfet_p with `sky130_fd_pr__pfet_01v8`. 
 Now, lets simulate the circuit with ngspice.
 
+### Step-10: NGSpice Simulation
 
-**Step-10:** NGSpice Simulation
+![](fig/IMG_2989.gif)
+
 Lets assign the inputs `a` and `b` with the pulse signals and try to observe the output.
 
 ```sh
 $ ngspice wallace3tree_test.cir
 ```
-If you encounter with errors recheck the circuit and perform the `run` again.
 
-### Figures
-
-Output waveform(z5z4z3z2z1z0):
-
-![Output waveforms](fig/zout/zout.png)
-
-<<<<<<< HEAD
+With this the ciruit simluation is verified. If you encounter with errors recheck the circuit and perform the `run` again.
 
 ## References: 
 
-* Wallace Tree: https://en.wikipedia.org/wiki/Wallace_tree
-
-* Binary Multiplier: https://en.wikipedia.org/wiki/Binary_multiplier?wprov=sfti1
-
-* Chris Wallace: https://en.wikipedia.org/wiki/Chris_Wallace_(computer_scientist)?wprov=sfti1
-
-* eSim EDA tool: https://esim.fossee.in
-
-=======
-## References:
-
-* https://en.wikipedia.org/wiki/Wallace_tree
+* Wallace Tree: [https://en.wikipedia.org/wiki/Wallace_tree](https://en.wikipedia.org/wiki/Wallace_tree)
+* eSim EDA tool: [https://esim.fossee.in](https://esim.fossee.in)
 
 ---
 This is a project submitted to [eSim marathon](https://hackathon.fossee.in/esim/) partnered with
@@ -216,5 +158,4 @@ This is a project submitted to [eSim marathon](https://hackathon.fossee.in/esim/
  [Indian Institute of Technology, Bombay(IITB)](https://www.iitb.ac.in/),
  [VLSI System Design(VSD)](https://www.vlsisystemdesign.com/about-us/) and 
 [Ministry of Education, India](https://www.education.gov.in/en) during May-June of 2021.
->>>>>>> 22a6a2754b128722f7451292b9f76703429d4d92
 
