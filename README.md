@@ -28,6 +28,8 @@ Open eSim application and select **open project** then navigate to this folder(w
 
 ## Ports of CMOS 3-bit Wallace Multiplier:
 
+![](fig/wallace_multiplier_draw.jpeg)
+
 Port | Type | Description
 --- | --- | ---
 a | Input | 3-bit input 
@@ -52,33 +54,73 @@ Full Adders | 3 nos
 3. and_gate
 4. xor_gate
 
-## Run:
+## Wallace Tree Algorithm: 
 
-Run the simulation in terminal by
+![](fig/stages.jpeg)
 
-```
-ngspice wallace3tree_test.cir
-```
+It has three steps:
+
+1. Multiply each bit of one of the arguments, by each bit of the other.
+2. Reduce the number of partial products to two by layers of full and half adders. 
+3. Group the wires in two numbers, and add them with a conventional adder.
+
+### 3 bit Reduction algorithm
+
+![](fig/stages_gif.gif)
+
 
 ## Schematics:
 
 You can view the schematic using **esim** software, launch esim and 
 open this folder, the esim automatically detects the `.proj` file 
-and creats a project for "**wallace3tree**". Then select 
-"**wallace3tree.sch**" to launch the schematic of the project.
+and creats a project for "**wallace3tree**". Then select respective 
+"**.sch**" file to launch the schematic of the project.
 
-3-bit Wallace tree Multiplier Schematic:
+## AND GATE
 
-![](fig/wallace3tree/wallace3tree_schematic.png)
+![AND gate Truth table](fig/and_tt.jpeg)
 
-AND gate schematic:
+### AND gate schematic:
 
-![AND gate schematic](fig/wallace3tree/and_gate_sch.png)
+![AND gate schematic](fig/and_sch_gif.gif)
 
-XOR gate schematic:
+## XOR GATE
 
-![XOR gate schematic](fig/wallace3tree/xor_gate_sch.png)
+![XOR gate Truth table](fig/xor_tt.jpeg)
 
+### XOR gate schematic:
+
+![XOR gate schematic](fig/xor_sch_gif.gif)
+
+## HALF ADDER
+
+![Half Adder Truth table](fig/ha_tt.jpeg)
+
+### Half Adder schematic:
+
+![Half Adder schematic](fig/ha_sch_gif.gif)
+
+## FULL ADDER
+
+![Full Adder Truth table](fig/fa_tt.jpeg)
+
+### Full Adder schematic:
+
+![Full Adder schematic](fig/fa_sch_gif.gif)
+
+
+##  3-bit Wallace Tree Multiplier schematic:
+
+![ 3-bit Wallace Tree Multiplier schematic](fig/wallace_sch_gif.gif)
+
+
+## Simulation:
+
+Open terminal, change the directory to wallace3tree.Run the simulation by
+
+```
+ngspice wallace3tree_test.cir
+```
 
 
 ## Figures
@@ -86,3 +128,16 @@ XOR gate schematic:
 Output waveform(z5z4z3z2z1z0):
 
 ![Output waveforms](fig/zout/zout.png)
+
+
+## References: 
+
+* Wallace Tree: https://en.wikipedia.org/wiki/Wallace_tree
+
+* Binary Multiplier: https://en.wikipedia.org/wiki/Binary_multiplier?wprov=sfti1
+
+* Chris Wallace: https://en.wikipedia.org/wiki/Chris_Wallace_(computer_scientist)?wprov=sfti1
+
+* eSim EDA tool: https://esim.fossee.in
+
+
