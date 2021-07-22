@@ -147,6 +147,10 @@ $ ngspice wallace3tree_test.cir
 
 With this the ciruit simluation is verified. If you encounter with errors recheck the circuit and perform the `run` again.
 
+## Video Tutorial
+
+[Design of a 3-bit Wallace Tree Multiplier in eSim](https://youtu.be/Da3kzKzzuLs)
+
 ## References: 
 
 * Wallace Tree: [https://en.wikipedia.org/wiki/Wallace_tree](https://en.wikipedia.org/wiki/Wallace_tree)
