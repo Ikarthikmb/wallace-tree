@@ -165,4 +165,4 @@ This is a project submitted to [eSim marathon](https://hackathon.fossee.in/esim/
 
 
 **Notes**
-![Note](Note.md)
+![Note](notes/Note.md)
